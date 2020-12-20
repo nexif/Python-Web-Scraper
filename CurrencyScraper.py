@@ -37,7 +37,7 @@ isHTMLCheck = 'DOCTYPE html'
 if not isHTMLCheck in source_code[:50]:
     raise Exception("Read contnt in not HTML document")
 
-endOfHTMLCheck = '2003-2020 MyBank.pl. Wszelkie prawa zastrzeżone'
+endOfHTMLCheck = 'Global site tag (gtag.js) - Google Analytics'
 if not endOfHTMLCheck in source_code:
     raise Exception("The page was not loaded fully")
 else:
