@@ -27,6 +27,7 @@ def is_a_percentage(value):
 resp = requests.get('https://kursy-walut.mybank.pl')
 source_code = resp.text
 
+
 try:
     assert resp.status_code == 200
     print("Status code: ", resp.status_code)
