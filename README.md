@@ -1,2 +1,1 @@
-# Python-Web-Scraper
- 
+Projekt zaliczeniowy z przedmiotu Język Python
