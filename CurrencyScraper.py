@@ -50,7 +50,7 @@ soup = BeautifulSoup(source_code, 'lxml')
 
 date = soup.find('div', class_='prawe-menu right')
 date = date.find('th', class_='head')
-date_str = date.text.split(' ')[6]  # wartość wyłuskana ze zdania "Kursy walut - Notowanie z dnia 2020-05-22"
+date_str = date.text.split(' ')[6]  # wartość wyłuskana ze zdania "Kursy walut - Notowanie z dnia 2000-01-01"
 
 date_pattern = '^(19[0-9][0-9]|20[0-9][0-9])(\-)(0[1-9]|1[0-2])(\-)([1-9]|0[1-9]|1[0-9]|2[0-9]|3[0-1])$'  # akceptuje lata 1900-2099
 if (re.search(date_pattern, date_str)):
