@@ -86,10 +86,12 @@ class CurrencyScraper:
     def start(self):
         resp = requests.get('https://kursy-walut.mybank.pl')
         source_code = resp.text
-        soup = BeautifulSoup(source_code, 'lxml')
+
         self.is_successful_HTTP_response(resp)
         self.is_HTML_check(source_code)
         self.is_end_correct_check(source_code)
+        
+        soup = BeautifulSoup(source_code, 'lxml')
         self.print_todays_date(soup)
         self.find_and_print_all_currencies(soup)
         self.show_links()
